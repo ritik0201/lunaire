@@ -1,0 +1,23 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "executionArgs": {
+    "projectName": "lunaire",
+    "projectPath": "e:\\coding\\Full stack\\NextJs\\Project\\lunaire",
+    "testIds": [
+      "TC010",
+      "TC012",
+      "TC004",
+      "TC007",
+      "TC015"
+    ],
+    "additionalInstruction": "Verify the frontend main text elements and workflows. Make sure that page headers, product names, prices, testimonials, and form validation success states are correctly rendered and visible on their respective pages.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-tLjDla8R-nVy1wTeu5-PGpVp1H6V_p8Lkhk2gh0RCYE7tmwz8Sv6-9grLIlDHsV4iwuqHaSSMbUoF2vSu3K1PEaH75i3wE0TFh2M9FR2Tt3r2UjX-8zOIoNcrCbl7paiykk"
+    }
+  },
+  "serverPort": 60876
+}

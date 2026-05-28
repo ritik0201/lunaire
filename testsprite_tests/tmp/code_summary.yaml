@@ -1,0 +1,97 @@
+version: "2"
+type: frontend
+tech_stack:
+  - HTML
+  - JavaScript
+  - React 19
+  - Vite
+  - Tailwind CSS v4
+  - React Router v7
+routes:
+  - path: /
+    file: src/pages/Home.jsx
+    auth_required: false
+    description: Brand landing page with bestsellers and testimonials
+  - path: /collections
+    file: src/pages/Collections.jsx
+    auth_required: false
+    description: Curated collections narrative page
+  - path: /shop
+    file: src/pages/Shop.jsx
+    auth_required: false
+    description: Boutique product catalog with filtering and sorting
+  - path: /product/:id
+    file: src/pages/ProductDetails.jsx
+    auth_required: false
+    description: Detailed product page with variant selections and details
+  - path: /cart
+    file: src/pages/Cart.jsx
+    auth_required: false
+    description: Shopping cart drawer and checkout path
+  - path: /checkout
+    file: src/pages/Checkout.jsx
+    auth_required: false
+    description: Checkout billing and shipping form page
+  - path: /about
+    file: src/pages/About.jsx
+    auth_required: false
+    description: About page detailing origin, founder, and philosophy
+  - path: /contact
+    file: src/pages/Contact.jsx
+    auth_required: false
+    description: Contact page with inquiry form
+features:
+  - name: Navigation
+    description: Seamless navigation menu to traverse across application routes
+    files:
+      - src/components/Navbar.jsx
+    entry_route: /
+    user_interactions:
+      - Click Home link to visit landing page
+      - Click Shop link to view boutique catalog
+      - Click Collections link to explore curate stories
+      - Click About link to read brand philosophy
+      - Click Contact link to get in touch
+    auth_required: false
+  - name: Cart Context & Management
+    description: Global state context managing items, quantities, and persistent storage
+    files:
+      - src/context/CartContext.jsx
+    entry_route: /shop
+    user_interactions:
+      - Add items of selected size and color to cart
+      - Increase or decrease item quantities in the cart
+      - View live cart subtotal and product list
+    auth_required: false
+  - name: Contact Serene Form
+    description: Submit custom messages or inquiries directly to support
+    files:
+      - src/pages/Contact.jsx
+    entry_route: /contact
+    user_interactions:
+      - Input user name
+      - Input user email
+      - Select inquiry subject
+      - Type description message
+      - Submit form and see success confirmation
+    auth_required: false
+  - name: Shop Filters & Sorting
+    description: Categorize and order items dynamically
+    files:
+      - src/pages/Shop.jsx
+    entry_route: /shop
+    user_interactions:
+      - Click on Silk Dreams or Lace Nights category filter
+      - Select sorting dropdown to sort items by Price Low to High
+    auth_required: false
+  - name: Product Selection & Configuration
+    description: Configure color and size selections on the product page
+    files:
+      - src/pages/ProductDetails.jsx
+    entry_route: /product/midnight-silk-slip
+    user_interactions:
+      - Click different color thumbnail
+      - Click size option button
+      - Click Add to Cart button
+    auth_required: false
+known_limitations: []

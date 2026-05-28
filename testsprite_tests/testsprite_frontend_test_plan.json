@@ -1,0 +1,696 @@
+[
+  {
+    "id": "TC001",
+    "title": "Complete checkout and submit an order",
+    "description": "A shopper can review the cart, proceed to checkout, enter billing and shipping details, and submit an order successfully.",
+    "category": "Checkout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Open a product from the catalog"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid size"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid color"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Open the cart"
+      },
+      {
+        "type": "action",
+        "description": "Proceed to checkout"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the billing details form"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the shipping details form"
+      },
+      {
+        "type": "action",
+        "description": "Submit the order"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Complete checkout and receive confirmation",
+    "description": "This verifies that a shopper can review the order summary, enter billing and shipping details, submit the checkout form, and see an order confirmation.",
+    "category": "Checkout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Review the order summary"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid billing details"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid shipping details"
+      },
+      {
+        "type": "action",
+        "description": "Submit the checkout form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order submission completed successfully"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Select variants and add a product to the cart",
+    "description": "A shopper can choose available size and color options on a product page and add the selected item to the cart successfully.",
+    "category": "Cart Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Open a product from the catalog"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid size"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid color"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart reflects the added item"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Select a product configuration and add it to the cart",
+    "description": "This verifies that a shopper can choose product variants, add the configured item to the cart, and see the selection reflected in the cart.",
+    "category": "Product Details and Configuration",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /product/midnight-silk-slip"
+      },
+      {
+        "type": "action",
+        "description": "Select a color variant"
+      },
+      {
+        "type": "action",
+        "description": "Select a size option"
+      },
+      {
+        "type": "action",
+        "description": "Add the item to the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart shows the selected product configuration"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart contains the added item"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Update cart quantity and subtotal",
+    "description": "A shopper can change the quantity of an item in the cart and see the subtotal update to match the new amount.",
+    "category": "Cart Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Open a product from the catalog"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid size"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid color"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Open the cart"
+      },
+      {
+        "type": "action",
+        "description": "Change the item quantity"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart subtotal is updated"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Update cart quantities and continue to checkout",
+    "description": "This verifies that a shopper can adjust item quantities in the cart, see the subtotal update, and continue to checkout.",
+    "category": "Cart Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "action",
+        "description": "Increase an item quantity"
+      },
+      {
+        "type": "action",
+        "description": "Decrease an item quantity"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart subtotal is updated"
+      },
+      {
+        "type": "action",
+        "description": "Proceed to checkout"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the checkout page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Browse the catalog by collection and price",
+    "description": "A shopper can filter the catalog to a collection and sort the results by price so the visible products update accordingly.",
+    "category": "Shop Browsing and Discovery",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Select the Silk Dreams collection filter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify only matching products are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Select the price low to high sorting option"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the catalog is reordered by price"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Preserve selected variants in the cart",
+    "description": "This verifies that a shopper can add a configured product from the shop and later confirm the chosen size and color are preserved in the cart.",
+    "category": "Cart Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Add a selected item to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected size is shown in the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected color is shown in the cart"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Open a product from the catalog and inspect its details",
+    "description": "A shopper can open a product detail page from the catalog and review the product information before buying.",
+    "category": "Shop Browsing and Discovery",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Open a product from the catalog"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product detail page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify product details are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Navigate through the main brand pages",
+    "description": "A shopper can move between the home, shop, collections, about, and contact pages using the main navigation and remain within the site.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the shopping catalog"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product catalog is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to explore the collections story"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collections page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to read the brand story"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the about page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to open the contact page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Review checkout totals before placing an order",
+    "description": "This verifies that a shopper can inspect the estimated totals on checkout before submitting the order.",
+    "category": "Checkout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Review the order summary"
+      },
+      {
+        "type": "action",
+        "description": "Review the estimated totals"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order summary is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the estimated totals are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Review the home page discovery content",
+    "description": "A visitor can land on the home page and scroll through the featured brand sections, bestsellers, and testimonials.",
+    "category": "Home Discovery",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify featured brand content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Scroll through the home page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify bestsellers and customer testimonials are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Review product details and recommendations",
+    "description": "This verifies that a shopper can inspect product information and related recommendations on the product details page.",
+    "category": "Product Details and Configuration",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /product/midnight-silk-slip"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the product details sections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify fabric, care, and fit details are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify related product recommendations are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Keep cart contents while navigating the site",
+    "description": "A shopper can add an item to the cart, move across other pages, and return to the cart without losing the selected item.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /shop"
+      },
+      {
+        "type": "action",
+        "description": "Open a product from the catalog"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid size"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid color"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the home page"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the shopping catalog"
+      },
+      {
+        "type": "action",
+        "description": "Open the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart still contains the added item"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC015",
+    "title": "Submit a contact inquiry successfully",
+    "description": "A visitor can send a contact inquiry from the contact page and see a success confirmation.",
+    "category": "Contact Inquiry Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a valid full name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with a valid email address"
+      },
+      {
+        "type": "action",
+        "description": "Select a subject for the inquiry"
+      },
+      {
+        "type": "action",
+        "description": "Type a message into the message field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC016",
+    "title": "Use the collections and contact journey",
+    "description": "A visitor can read the collections and brand story pages, then submit an inquiry through the contact form and receive confirmation.",
+    "category": "Contact",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collections storytelling page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to read the brand story"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the about page is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to open the contact page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the inquiry message form"
+      },
+      {
+        "type": "action",
+        "description": "Submit the contact form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC017",
+    "title": "Read the collections narrative on the collections page",
+    "description": "A visitor can open the collections page and review the curated storytelling content for the brand's featured themes.",
+    "category": "Collections Storytelling",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the curated collection narrative is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify featured collection themes are visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC018",
+    "title": "Learn about the founder and philosophy on the about page",
+    "description": "A visitor can use the about page to review the founder background and brand philosophy.",
+    "category": "About Brand Story",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /about"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify founder information is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify brand philosophy content is visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Understand the brand aesthetic direction from collections content",
+    "description": "A visitor can use the collections page to learn how the brand presents its aesthetic direction and craftsmanship story.",
+    "category": "Collections Storytelling",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify brand craftsmanship storytelling is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the brand's aesthetic direction is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC020",
+    "title": "Read the brand origin story on the about page",
+    "description": "A visitor can open the about page and learn the brand's origin story.",
+    "category": "About Brand Story",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /about"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the origin story is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC021",
+    "title": "Reject an incomplete contact submission",
+    "description": "A visitor who leaves a required contact form field empty sees validation feedback and cannot submit the inquiry.",
+    "category": "Contact Inquiry Form",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the name field with a valid full name"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with a valid email address"
+      },
+      {
+        "type": "action",
+        "description": "Select a subject for the inquiry"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is not visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC022",
+    "title": "Show cart empty state before any items are added",
+    "description": "A shopper who opens the cart before selecting anything sees an empty state instead of cart contents.",
+    "category": "Cart Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty cart message is displayed"
+      }
+    ],
+    "priority": "Low"
+  }
+]
